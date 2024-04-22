@@ -8,7 +8,7 @@ data:
   train_batch_size: 32
   val_batch_size: 128
   test_batch_size: 128
-  num_workers: 4
+  num_workers: 8
   train_transform:
     [
       [ RandomHorizontalFlip, [] ],
@@ -40,5 +40,12 @@ trainer:
       weight_decay: 0.0
   callbacks:
     [
-      [ EarlyStopping, [ monitor: "val_loss", min_delta: 0.0, patience: 12, verbose: True, mode: "min" ] ],
+      callback:
+        type: EarlyStopping
+        args:
+          monitor: "val_loss"
+          min_delta: 0.0
+          patience: 12
+          verbose: True
+          mode: "min"
     ]

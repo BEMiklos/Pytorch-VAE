@@ -43,6 +43,7 @@ def main():
     logger_type = config['trainer']['logger']['type']
     logger_args = config['trainer']['logger']['args']
     logger = getattr(L.pytorch.loggers, logger_type)(**logger_args)
+    logger = EarlyStopping(monitor="val_loss", mode="min", patience=12, verbose=True)
 
     # Define dataset and dataloader
     train_transform = P.transforms(config['data']['train_transform'])

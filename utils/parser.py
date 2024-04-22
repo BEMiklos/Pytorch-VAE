@@ -54,6 +54,6 @@ class Parser:
         for callback in callbacks_list:
             callback_name = callback[0]
             callback_args = callback[1:]
-            callback = getattr(L.pytorch.callbacks, callback_name)(*callback_args)
+            callback = getattr(L.pytorch.callbacks, callback_name)(callback_args)
             callbacks.append(callback)
         return callbacks
