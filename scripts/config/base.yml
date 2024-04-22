@@ -1,0 +1,44 @@
+model:
+  config: "vae/model/vae_128_1.0.yml"
+  save_dir:
+
+data:
+  dataset: "CIFAR10"
+  val_split: 0.2
+  train_batch_size: 32
+  val_batch_size: 128
+  test_batch_size: 128
+  num_workers: 4
+  train_transform:
+    [
+      [ RandomHorizontalFlip, [] ],
+      [ RandomRotation, [ 30 ] ],
+      [ ColorJitter, [ 0.2, 0.2, 0.2, 0.1 ] ],
+      [ Resize, [ [32, 32] ] ],
+      [ ToTensor, [] ],
+      [ Normalize, [ [0.5, 0.5, 0.5], [0.5, 0.5, 0.5] ] ],
+    ]
+  test_transform:
+    [
+      [ Resize, [ [32, 32] ] ],
+      [ ToTensor, [] ],
+      [ Normalize, [ [0.5, 0.5, 0.5], [0.5, 0.5, 0.5] ] ],
+    ]
+
+trainer:
+  max_epochs: 250
+  logger:
+    use: True
+    type: TensorBoardLogger
+    args:
+      name: vae_experiment
+      save_dir: logs/
+  optimizer:
+    type: Adam
+    args:
+      lr: 0.0001
+      weight_decay: 0.0
+  callbacks:
+    [
+      [ EarlyStopping, [ monitor: "val_loss", min_delta: 0.0, patience: 12, verbose: True, mode: "min" ] ],
+    ]
