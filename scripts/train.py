@@ -3,12 +3,8 @@ import sys
 from pathlib import Path
 
 import torch
-from lightning.pytorch.callbacks.early_stopping import EarlyStopping
-from torch.utils.data import DataLoader, random_split
-from torchvision import datasets, transforms
 import lightning as L
 import numpy as np
-from lightning.pytorch.loggers import TensorBoardLogger
 
 FILE = Path(__file__).resolve()
 SCRIPTS = FILE.parents[0]
@@ -18,10 +14,27 @@ if str(ROOT) not in sys.path:
 ROOT = Path(os.path.relpath(ROOT, Path.cwd()))
 
 from vae import VAE
-from utils import Parser as P
+from utils import Parser
+from argparse import ArgumentParser
 
 def main():
-    config = P.read_config(config_file= SCRIPTS / "config/base.yml")
+    # Argument parser
+    parser = ArgumentParser(description="Train a VAE model")
+    parser.add_argument('--config', type=str, default=SCRIPTS / "config/base.yml", help='Path to the configuration file')
+    parser.add_argument('--model', type=str, default=None, help='Path to the model configuration file')
+    parser.add_argument('--detached', type=bool, default=None, help='Wether to detach the classifier from the encoder')
+    parser.add_argument('--kld', type=float, default=None, help='The weight of the KLD loss')
+    parser.add_argument('--mse', type=float, default=None, help='The weight of the MSE loss')
+    parser.add_argument('--class_weight', type=float, default=None, help='The weight of the classification loss')
+    parser.add_argument('--output', type=str, default=None, help='Path to the model configuration file')
+    parser.add_argument('--dataset', type=str, default=None, help='Pytorch dataset name')
+    parser.add_argument('--val_split', type=float, default=None, help='Train-validation dataset split ratio')
+    args = parser.parse_args()
+
+    # Initialize parser
+    p = Parser(config_file= args.config, args=args)
+
+    config = p.config
 
     # Define the device
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -31,44 +44,18 @@ def main():
     np.random.seed(42)
 
     # Initialize VAE model
-    vae_config_file = config['model']['config']
-    vae = VAE(config_file= ROOT / vae_config_file).to(device)
+    vae = VAE(config_file= ROOT / p.model_config()).to(device)
 
     # Initialize optimizer
-    optimizer_type = config['trainer']['optimizer']['type']
-    optimizer_args = config['trainer']['optimizer']['args']
-    vae.optimizer = getattr(torch.optim, optimizer_type)(vae.parameters(), **optimizer_args)
+    vae.optimizer = p.optimizer(vae)
 
     # Initialize TensorBoard logger
-    logger_type = config['trainer']['logger']['type']
-    logger_args = config['trainer']['logger']['args']
-    logger = getattr(L.pytorch.loggers, logger_type)(**logger_args)
-    logger = EarlyStopping(monitor="val_loss", mode="min", patience=12, verbose=True)
+    logger = p.logger()
 
-    # Define dataset and dataloader
-    train_transform = P.transforms(config['data']['train_transform'])
-    # Define dataset and dataloader
-    test_transform = P.transforms(config['data']['test_transform'])
+    # Inintialize data loaders
+    train_loader, val_loader, test_loader = p.dataloaders(ROOT)
 
-    # Load dataset and apply transforms
-    dataset_name = config['data']['dataset']
-    val_split = config['data']['val_split']
-    train_batch_size = config['data']['train_batch_size']
-    val_batch_size = config['data']['val_batch_size']
-    test_batch_size = config['data']['test_batch_size']
-    num_workers = config['data']['num_workers']
-
-    # Load CIFAR10 dataset
-    train_dataset = datasets.__dict__[dataset_name](root= ROOT / 'data', train=True, download=True, transform=train_transform)
-    test_dataset = datasets.__dict__[dataset_name](root= ROOT / 'data', train=False, download=True, transform=test_transform)
-    val_size = int(val_split * len(train_dataset))
-    train_size = len(train_dataset) - val_size
-    train_dataset, val_dataset = random_split(train_dataset, [train_size, val_size])
-    train_loader = DataLoader(train_dataset, batch_size=train_batch_size, shuffle=True, num_workers=num_workers)
-    val_loader = DataLoader(val_dataset, batch_size=val_batch_size, shuffle=False, num_workers=num_workers)
-    test_loader = DataLoader(test_dataset, batch_size=test_batch_size, shuffle=False, num_workers=num_workers)
-
-    callbacks = P.callbacks(config['trainer']['callbacks'])
+    callbacks = p.callbacks()
 
     # Initialize Lightning Trainer
     trainer = L.Trainer(max_epochs=config['trainer']['max_epochs'],

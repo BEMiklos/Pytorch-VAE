@@ -1,0 +1,17 @@
+program: train.py
+name: classification_weight
+method: bayes
+metric:
+  goal: minimize
+  name: val_loss
+parameters:
+  detached:
+    values: [True, False]
+  class_weight:
+    distribution: uniform
+    min: 1.0
+    max: 5000.0
+  kld:
+    distribution: uniform
+    min: 1.0
+    max: 1.5
