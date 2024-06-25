@@ -2,32 +2,35 @@ import torch
 import torch.nn.functional as F
 import torch.optim as optim
 import lightning as lt
-from utils import Parser as P
+from utils import Parser
 
 class VAE(lt.LightningModule):
     def __init__(self,
                  config_file: str = 'vae_config.yaml',
+                 detached: bool = False,
                  **kwargs) -> None:
         super(VAE, self).__init__()
         self.save_hyperparameters()
+        p=Parser(config_file=config_file)
+        self.detached = detached
 
         # Read model file and build networks
-        self.config = P.read_config(config_file)
+        self.config = p.config
 
         self.kld_weight = self.config['loss_weight']['kld']
         self.mse_weight = self.config['loss_weight']['mse']
         self.class_weight = self.config['loss_weight']['class']
 
-        self.encoder = P.network(self.config['encoder'])
-        self.fc_mu = P.network(self.config['latent_space'])
-        self.classifier = P.network(self.config['classifier'])
-        self.fc_var = P.network(self.config['latent_space'])
-        self.decoder = P.network(self.config['decoder'])
+        self.encoder = p.network(self.config['encoder'])
+        self.fc_mu = p.network(self.config['latent_space'])
+        self.classifier = p.network(self.config['classifier'])
+        self.fc_var = p.network(self.config['latent_space'])
+        self.decoder = p.network(self.config['decoder'])
 
     def forward(self, x):
         mu, log_var = self.encode(x)
         z = self.reparameterize(mu, log_var)
-        pred = self.classifier(z)
+        pred = self.classifier(z) if self.detached == False else self.classifier(z.detach())
         return self.decode(z), pred, mu, log_var
 
     def encode(self, x):
@@ -86,4 +89,3 @@ class VAE(lt.LightningModule):
 
         values = {"test_bce": test_bce, "test_kld": test_kld}
         self.log_dict(values, prog_bar=True)
-
