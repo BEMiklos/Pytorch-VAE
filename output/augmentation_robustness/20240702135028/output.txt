@@ -1,0 +1,152 @@
+Dataset 0
+[01/18] Average latent space vector size: 5.640308856964111
+[02/18] Std deviation of latent space vector size: 0.9871588349342346
+[03/18] Average latent space vector size by class: [5.6789107, 5.980724, 5.478921, 5.7765293, 5.226583, 5.6879463, 5.205264, 5.93243, 5.4595323, 5.9762464]
+[04/18] Std  of latent space vector size by class: [0.9607311, 0.8315937, 1.0448518, 1.1016113, 0.9074203, 1.0194211, 0.91968197, 0.96391016, 0.88678616, 0.80343413]
+[05/18] Average diff vector size: 0.0
+[06/18] Std deviation of diff vector size: 0.0
+[07/18] Average diff vector size by class: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[08/18] Std  of diff vector size by class: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+[09/18] Average cosine similarity of diff vectors: 0.1689201444387436
+[10/18] Std dev cosine similarity of diff vectors: 0.17502371966838837
+[11/18] Average cosine similarity of diff vectors by class: [0.3735371, 0.32076207, 0.25985327, 0.2599613, 0.31624472, 0.2376742, 0.3374757, 0.31900582, 0.32699382, 0.34119636]
+[12/18] Std dev cosine similarity of diff vectors by class: [0.1928513, 0.1713452, 0.1910018, 0.1806301, 0.18655011, 0.17900085, 0.19833304, 0.18245985, 0.18271583, 0.17355871]
+[13/18] Average latent space vector size: 43.997215270996094
+[14/18] Std deviation of latent space vector size: 7.753349781036377
+[15/18] Average latent space vector size: 196.7045440673828
+[16/18] Std deviation of latent space vector size: 90.09339141845703
+[17/18] Average latent space vector size: 1.7481077909469604
+[18/18] Std deviation of latent space vector size: 0.44383886456489563
+Dataset 1
+[01/18] Average latent space vector size: 5.462173938751221
+[02/18] Std deviation of latent space vector size: 1.0049002170562744
+[03/18] Average latent space vector size by class: [5.4968286, 5.690207, 5.4321804, 5.5081477, 5.158493, 5.5398846, 5.1833735, 5.756855, 5.2458286, 5.6099377]
+[04/18] Std  of latent space vector size by class: [1.0058051, 0.8777203, 1.0627807, 1.104985, 0.97297865, 1.0753388, 0.9156953, 0.9773762, 0.92638254, 0.9072183]
+[05/18] Average diff vector size: 4.67161226272583
+[06/18] Std deviation of diff vector size: 2.0156614780426025
+[07/18] Average diff vector size by class: [4.3949323, 4.787561, 4.6250496, 4.979697, 4.2916055, 4.9465947, 4.3003817, 5.041111, 4.346511, 5.0026746]
+[08/18] Std  of diff vector size by class: [1.7703373, 1.9429518, 2.0853965, 2.1736186, 1.7805436, 2.2728891, 1.8058877, 2.0914955, 1.8902096, 2.050534]
+[09/18] Average cosine similarity of diff vectors: 0.06696420162916183
+[10/18] Std dev cosine similarity of diff vectors: 0.18509002029895782
+[11/18] Average cosine similarity of diff vectors by class: [0.25545755, 0.22672586, 0.164365, 0.14750414, 0.21299832, 0.14739507, 0.23914666, 0.22343157, 0.20693195, 0.21738674]
+[12/18] Std dev cosine similarity of diff vectors by class: [0.20129193, 0.17937872, 0.20145504, 0.1932952, 0.19813338, 0.1894916, 0.20701787, 0.19095135, 0.19313267, 0.18837723]
+[13/18] Average latent space vector size: 41.66573715209961
+[14/18] Std deviation of latent space vector size: 7.613307476043701
+[15/18] Average latent space vector size: 189.22012329101562
+[16/18] Std deviation of latent space vector size: 96.7524185180664
+[17/18] Average latent space vector size: 1.7852678298950195
+[18/18] Std deviation of latent space vector size: 0.4599776566028595
+Dataset 2
+[01/18] Average latent space vector size: 5.452049732208252
+[02/18] Std deviation of latent space vector size: 1.3313568830490112
+[03/18] Average latent space vector size by class: [5.4878902, 5.6259294, 5.3554344, 5.524164, 5.1897655, 5.5414977, 5.1627235, 5.6316733, 5.4052052, 5.596211]
+[04/18] Std  of latent space vector size by class: [1.3456864, 1.2918035, 1.3223163, 1.3837643, 1.3241446, 1.4252491, 1.1845989, 1.3266342, 1.3559334, 1.2384989]
+[05/18] Average diff vector size: 6.668953895568848
+[06/18] Std deviation of diff vector size: 1.8841304779052734
+[07/18] Average diff vector size by class: [6.4674, 7.0113797, 6.395174, 6.6542616, 6.325235, 6.7472143, 6.2187314, 7.1206026, 6.638547, 7.11099]
+[08/18] Std  of diff vector size by class: [1.866793, 1.8950546, 1.8645588, 1.9486216, 1.8347601, 1.9349476, 1.699845, 1.840013, 1.9022195, 1.7847606]
+[09/18] Average cosine similarity of diff vectors: 0.03864168003201485
+[10/18] Std dev cosine similarity of diff vectors: 0.18439923226833344
+[11/18] Average cosine similarity of diff vectors by class: [0.16250779, 0.096004315, 0.10487641, 0.09327634, 0.10048129, 0.08372746, 0.084143385, 0.09028732, 0.090361625, 0.09563551]
+[12/18] Std dev cosine similarity of diff vectors by class: [0.19849087, 0.1922969, 0.19443662, 0.1896268, 0.19523087, 0.1862946, 0.21372281, 0.18726978, 0.19391985, 0.19404835]
+[13/18] Average latent space vector size: 41.84751510620117
+[14/18] Std deviation of latent space vector size: 10.125845909118652
+[15/18] Average latent space vector size: 225.94752502441406
+[16/18] Std deviation of latent space vector size: 156.4219512939453
+[17/18] Average latent space vector size: 2.119502067565918
+[18/18] Std deviation of latent space vector size: 0.4631810486316681
+Dataset 3
+[01/18] Average latent space vector size: 5.6642303466796875
+[02/18] Std deviation of latent space vector size: 1.009161353111267
+[03/18] Average latent space vector size by class: [5.727572, 5.974684, 5.4598584, 5.744289, 5.214724, 5.7467923, 5.1716533, 5.9886303, 5.5593867, 6.0547104]
+[04/18] Std  of latent space vector size by class: [0.9898147, 0.85103947, 1.086712, 1.086194, 0.9246071, 1.0335162, 0.92551833, 0.9982933, 0.86755496, 0.84949887]
+[05/18] Average diff vector size: 3.00559401512146
+[06/18] Std deviation of diff vector size: 3.250296115875244
+[07/18] Average diff vector size by class: [2.8118489, 3.343736, 2.7816994, 2.8949099, 2.5022845, 2.9622583, 2.4149187, 3.6580045, 3.132841, 3.5534382]
+[08/18] Std  of diff vector size by class: [3.020791, 3.5550373, 3.0242443, 3.196869, 2.8685691, 3.1691864, 2.7490044, 3.6273177, 3.3943644, 3.5278685]
+[09/18] Average cosine similarity of diff vectors: 0.17452025413513184
+[10/18] Std dev cosine similarity of diff vectors: 0.17378655076026917
+[11/18] Average cosine similarity of diff vectors by class: [0.36566055, 0.26939988, 0.24691777, 0.24813505, 0.29875824, 0.2279856, 0.3103997, 0.24557912, 0.2660767, 0.27362487]
+[12/18] Std dev cosine similarity of diff vectors by class: [0.19394279, 0.17978787, 0.18312252, 0.1788315, 0.18621367, 0.17596492, 0.19993034, 0.18484862, 0.18545127, 0.18174753]
+[13/18] Average latent space vector size: 44.22758865356445
+[14/18] Std deviation of latent space vector size: 7.942938327789307
+[15/18] Average latent space vector size: 201.2673797607422
+[16/18] Std deviation of latent space vector size: 92.15338897705078
+[17/18] Average latent space vector size: 1.9547978639602661
+[18/18] Std deviation of latent space vector size: 0.4912146031856537
+Dataset 4
+[01/18] Average latent space vector size: 6.470750331878662
+[02/18] Std deviation of latent space vector size: 1.3929377794265747
+[03/18] Average latent space vector size by class: [6.834305, 6.6365523, 6.3588953, 6.477812, 6.0143156, 6.303929, 6.071278, 6.7062044, 6.4567847, 6.8474255]
+[04/18] Std  of latent space vector size by class: [1.6397814, 1.3117224, 1.4162625, 1.3769076, 1.242165, 1.1987882, 1.3515589, 1.2872779, 1.4277911, 1.3504273]
+[05/18] Average diff vector size: 3.7737035751342773
+[06/18] Std deviation of diff vector size: 4.018728733062744
+[07/18] Average diff vector size by class: [4.1841016, 3.7292702, 3.934956, 3.6688068, 3.476271, 3.379712, 3.5510123, 4.0957394, 3.7013428, 4.0158215]
+[08/18] Std  of diff vector size by class: [4.3537455, 4.020898, 4.0050073, 3.9688175, 3.7982728, 3.7210205, 3.729324, 4.18995, 3.9906468, 4.2728853]
+[09/18] Average cosine similarity of diff vectors: 0.11224985122680664
+[10/18] Std dev cosine similarity of diff vectors: 0.18400448560714722
+[11/18] Average cosine similarity of diff vectors by class: [0.23688245, 0.23573339, 0.15463415, 0.18940923, 0.19667706, 0.17451128, 0.25167224, 0.1966095, 0.2288853, 0.23184021]
+[12/18] Std dev cosine similarity of diff vectors by class: [0.22611678, 0.19463198, 0.2061265, 0.19752438, 0.21825692, 0.19395882, 0.21473049, 0.21520396, 0.20220321, 0.20551123]
+[13/18] Average latent space vector size: 48.80069351196289
+[14/18] Std deviation of latent space vector size: 10.726990699768066
+[15/18] Average latent space vector size: 251.55909729003906
+[16/18] Std deviation of latent space vector size: 130.03053283691406
+[17/18] Average latent space vector size: 1.9296753406524658
+[18/18] Std deviation of latent space vector size: 0.48968231678009033
+Dataset 5
+[01/18] Average latent space vector size: 6.050814628601074
+[02/18] Std deviation of latent space vector size: 1.2581441402435303
+[03/18] Average latent space vector size by class: [6.2183995, 6.4125752, 5.8751082, 6.1399226, 5.4778476, 6.175994, 5.65592, 6.197316, 6.0235577, 6.3315067]
+[04/18] Std  of latent space vector size by class: [1.339563, 1.1759607, 1.2848947, 1.2878934, 1.1183567, 1.1943699, 1.1675012, 1.2454295, 1.2390075, 1.1904335]
+[05/18] Average diff vector size: 6.945781230926514
+[06/18] Std deviation of diff vector size: 1.8105461597442627
+[07/18] Average diff vector size by class: [6.706127, 7.684228, 6.550387, 6.761835, 6.1892343, 7.0338135, 6.5888457, 7.6590233, 6.703178, 7.5811396]
+[08/18] Std  of diff vector size by class: [1.9586433, 1.5964344, 1.9001034, 1.8185103, 1.6571913, 1.7312688, 1.586772, 1.701475, 1.8286343, 1.5831921]
+[09/18] Average cosine similarity of diff vectors: 0.16225358843803406
+[10/18] Std dev cosine similarity of diff vectors: 0.17037372291088104
+[11/18] Average cosine similarity of diff vectors by class: [0.24195594, 0.13151373, 0.21149935, 0.25997743, 0.19776444, 0.20036574, 0.16651654, 0.12675662, 0.2366, 0.15540321]
+[12/18] Std dev cosine similarity of diff vectors by class: [0.18377757, 0.16402003, 0.16720141, 0.18335901, 0.16868748, 0.17368118, 0.16092122, 0.1634826, 0.18276045, 0.16450122]
+[13/18] Average latent space vector size: 46.0036735534668
+[14/18] Std deviation of latent space vector size: 9.684436798095703
+[15/18] Average latent space vector size: 127.88077545166016
+[16/18] Std deviation of latent space vector size: 58.97038269042969
+[17/18] Average latent space vector size: 2.283269166946411
+[18/18] Std deviation of latent space vector size: 0.3727690577507019
+Dataset 6
+[01/18] Average latent space vector size: 6.805179595947266
+[02/18] Std deviation of latent space vector size: 1.210729718208313
+[03/18] Average latent space vector size by class: [7.2815447, 6.861726, 6.7243814, 6.7710023, 6.3080134, 6.8867416, 6.338089, 6.8811455, 7.002061, 6.9970946]
+[04/18] Std  of latent space vector size by class: [1.3530666, 1.1358907, 1.279815, 1.171873, 1.0450613, 1.1172326, 1.1375926, 1.1804296, 1.1518881, 1.1749437]
+[05/18] Average diff vector size: 7.13930082321167
+[06/18] Std deviation of diff vector size: 1.630139946937561
+[07/18] Average diff vector size by class: [7.445074, 7.3699207, 6.912828, 6.86583, 6.666904, 7.203092, 6.6783915, 7.462201, 7.193172, 7.5955935]
+[08/18] Std  of diff vector size by class: [1.748982, 1.5885242, 1.711461, 1.6544414, 1.4809941, 1.571961, 1.6392002, 1.5144215, 1.4991373, 1.5507668]
+[09/18] Average cosine similarity of diff vectors: 0.09494522213935852
+[10/18] Std dev cosine similarity of diff vectors: 0.1725044846534729
+[11/18] Average cosine similarity of diff vectors by class: [0.17295168, 0.12221233, 0.13754134, 0.16756691, 0.12365428, 0.12861958, 0.13938731, 0.1143012, 0.14974268, 0.118714154]
+[12/18] Std dev cosine similarity of diff vectors by class: [0.16926533, 0.17470734, 0.17411642, 0.18290019, 0.1695441, 0.17589764, 0.18133487, 0.17636114, 0.170694, 0.17563929]
+[13/18] Average latent space vector size: 51.19108200073242
+[14/18] Std deviation of latent space vector size: 10.29859733581543
+[15/18] Average latent space vector size: 353.8629150390625
+[16/18] Std deviation of latent space vector size: 160.65713500976562
+[17/18] Average latent space vector size: 2.209139347076416
+[18/18] Std deviation of latent space vector size: 0.422136515378952
+Dataset 7
+[01/18] Average latent space vector size: 5.697240829467773
+[02/18] Std deviation of latent space vector size: 1.0016491413116455
+[03/18] Average latent space vector size by class: [5.882559, 5.983544, 5.495079, 5.7756257, 5.223662, 5.783287, 5.202298, 5.938601, 5.652827, 6.0349274]
+[04/18] Std  of latent space vector size by class: [1.0820357, 0.8348533, 1.0650816, 1.0609978, 0.85709304, 1.0406662, 0.88090456, 0.98606277, 0.9234279, 0.8199112]
+[05/18] Average diff vector size: 4.678942680358887
+[06/18] Std deviation of diff vector size: 4.865697383880615
+[07/18] Average diff vector size by class: [4.768345, 5.0133796, 4.2886887, 4.8432674, 4.1464314, 4.806792, 4.336082, 5.18075, 4.5414286, 4.8642597]
+[08/18] Std  of diff vector size by class: [4.8499017, 5.166699, 4.651248, 4.930487, 4.371101, 4.9867535, 4.543111, 5.0735183, 4.7626123, 5.1508384]
+[09/18] Average cosine similarity of diff vectors: 0.17272445559501648
+[10/18] Std dev cosine similarity of diff vectors: 0.17489533126354218
+[11/18] Average cosine similarity of diff vectors by class: [0.3310369, 0.25467393, 0.24187315, 0.23553026, 0.24815232, 0.21576439, 0.21496047, 0.25001824, 0.2767421, 0.25121024]
+[12/18] Std dev cosine similarity of diff vectors by class: [0.19866616, 0.18623656, 0.18696935, 0.17848046, 0.18848623, 0.17671987, 0.22469567, 0.19030888, 0.18639085, 0.19642304]
+[13/18] Average latent space vector size: 44.69503402709961
+[14/18] Std deviation of latent space vector size: 7.486630916595459
+[15/18] Average latent space vector size: 204.17669677734375
+[16/18] Std deviation of latent space vector size: 93.34668731689453
+[17/18] Average latent space vector size: 1.992772102355957
+[18/18] Std deviation of latent space vector size: 0.49053895473480225
